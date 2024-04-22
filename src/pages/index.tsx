@@ -10,23 +10,23 @@ const pageStyles = {
 
 const IndexPage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
-    query HeaderQuery {
-      contentfulBlogPost(id: { eq: "ee4b602d-58a5-559a-9354-b4ac87ead20a" }) {
-        description {
-          description
+    query PageQuery {
+      allContentfulTest {
+        edges {
+          node {
+            title
+          }
         }
       }
     }
   `)
 
-  const { description } = data.contentfulBlogPost.description
+  const { title } = data.allContentfulTest.edges[0].node
 
   return (
     <main style={pageStyles}>
       <h1>The Classical Committee on Home Missions</h1>
-      {description && (
-        <p>✅ {data.contentfulBlogPost.description.description}</p>
-      )}
+      {title && <p>✅ {title}</p>}
     </main>
   )
 }
