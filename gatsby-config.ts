@@ -4,7 +4,8 @@ dotenv.config({ path: `.env.${process.env.NODE_ENV}` })
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `CCHM: The Classical Committee on Home Missions`,
+    title: `PNW Church Planting`,
+    description: `PNW Church Planting is brought to you by The Classical Committee on Home Missions, a group of representatives from each regional Classis.`,
     siteUrl: `https://pnwchurchplanting.org`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
