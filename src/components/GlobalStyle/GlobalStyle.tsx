@@ -23,8 +23,12 @@ const GlobalStyle = createGlobalStyle`
     background-color: #fff;
   }
 
+  svg { 
+    display: block;
+  }
+
   .header {
-    height: 4rem;
+    height: 6rem;
     display: flex;
     align-items: center;
     justify-content: space-between
@@ -39,17 +43,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .branding {
-    /* background-color: red; */
-  }
-
-  .logo {
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: 1.75rem;
-    
-    a, a:hover, a:focus, a:active {
-      color: #1f1f1f;
+    .branding-link {
+      display: block;
       border: none;
       transition: none;
     }
@@ -71,6 +66,31 @@ const GlobalStyle = createGlobalStyle`
   
   .section {
     min-height: 80vh;
+  }
+
+  .church-plant-heading {
+    margin: 2rem 0;
+  }
+
+  .church-plant {
+    display: flex;
+    grid-gap: 2rem;
+    margin: 4rem 0;
+
+    > div {
+      flex: 1
+    }
+  }
+
+  /* a11y */
+  .visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
   }
 `
 
