@@ -2,10 +2,12 @@ import { styled } from 'styled-components'
 import type { Props } from './Header'
 
 const StyledHeader = styled('header')<Partial<Props>>`
-  height: 6rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  .container {
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .branding {
     .branding-link {
