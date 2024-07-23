@@ -7,10 +7,14 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <section className="section">
-        <p>Home Page</p>
+        <h1>
+          Reformed Church Planting PNW is the home for planting a new URCNA
+          church in the Pacific Northwest region. This site is maintained by the
+          Classical Committee on Home Missions, PNW.
+        </h1>
       </section>
       <section className="section">
-        <p>About Us</p>
+        <h1>About Us</h1>
       </section>
     </Layout>
   )

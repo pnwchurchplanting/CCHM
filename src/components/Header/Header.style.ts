@@ -1,9 +1,10 @@
 import { styled } from 'styled-components'
+import { rem } from 'components/GlobalStyle'
 import type { Props } from './Header'
 
 const StyledHeader = styled('header')<Partial<Props>>`
   .container {
-    height: 6rem;
+    height: ${rem(120)};
     display: flex;
     align-items: center;
     justify-content: space-between;

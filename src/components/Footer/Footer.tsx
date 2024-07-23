@@ -1,4 +1,5 @@
 import React from 'react'
+import Container from 'components/Container'
 import StyledFooter from './Footer.style'
 
 export interface Props {
@@ -8,9 +9,11 @@ export interface Props {
 const Footer = ({ className = '' }: Props) => {
   return (
     <StyledFooter className={className}>
-      <p>
-        <small>&copy; 2024 | The Classical Committee on Home Missions</small>
-      </p>
+      <Container>
+        <p>
+          <small>&copy; 2024 | The Classical Committee on Home Missions</small>
+        </p>
+      </Container>
     </StyledFooter>
   )
 }

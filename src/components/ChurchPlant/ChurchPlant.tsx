@@ -3,33 +3,40 @@ import StyledChurchPlant from './ChurchPlant.style'
 
 export interface Props {
   className?: string
+  name: string
+  location: string
+  description: string
+  image?: string
+  logo?: string
+  link?: string
+  linkText?: string
 }
 
-const ChurchPlant = ({ className = '' }: Props) => {
+const ChurchPlant = ({
+  className = '',
+  name,
+  location,
+  description,
+  image,
+  logo,
+  link,
+  linkText,
+}: Props) => {
   return (
     <StyledChurchPlant className={className}>
       <div>
         <img
-          src="https://placehold.co/700x525?text=Church Photo"
-          alt="placeholder"
+          src={image || 'https://placehold.co/700x525?text=Coming Soon'}
+          alt={name}
         />
       </div>
       <div>
+        {logo && <img src={logo} alt={`${name} logo`} height={80} />}
+        <h2>{name}</h2>
+        <p>{location}</p>
+        <p>{description}</p>
         <p>
-          <img
-            src="https://placehold.co/150x150?text=Church Logo"
-            alt="placeholder"
-          />
-        </p>
-        <h2>Providence Reformed Church</h2>
-        <p>Meridian, Idaho</p>
-        <p>
-          Providence Reformed Church is a church plant of Christ Reformed Church
-          in Nampa, Idaho. We are happy to provide a new home for Christian
-          worship in the heart of Meridian, Idaho, just outside of Boise.
-        </p>
-        <p>
-          <a href="https://www.providenceurc.org">providenceurc.org</a>
+          <a href={link}>{linkText || link}</a>
         </p>
       </div>
     </StyledChurchPlant>

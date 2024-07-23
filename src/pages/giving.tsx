@@ -6,7 +6,7 @@ import SEO from 'components/SEO'
 const GivingPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <p>Giving</p>
+      <h1>Giving</h1>
     </Layout>
   )
 }

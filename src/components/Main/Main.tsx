@@ -1,4 +1,5 @@
 import React from 'react'
+import Container from 'components/Container'
 import StyledMain from './Main.style'
 
 export interface Props {
@@ -7,7 +8,11 @@ export interface Props {
 }
 
 const Main = ({ className = '', children }: Props) => {
-  return <StyledMain className={className}>{children}</StyledMain>
+  return (
+    <StyledMain className={className}>
+      <Container>{children}</Container>
+    </StyledMain>
+  )
 }
 
 export default Main

@@ -6,7 +6,7 @@ import SEO from 'components/SEO'
 const ContactUsPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <p>Contact Us</p>
+      <h1>Contact Us</h1>
     </Layout>
   )
 }

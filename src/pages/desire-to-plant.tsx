@@ -6,7 +6,7 @@ import SEO from 'components/SEO'
 const DesireToPlantPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <p>Desire To Plant</p>
+      <h1>Desire To Plant</h1>
     </Layout>
   )
 }

@@ -1,12 +1,13 @@
 import { styled } from 'styled-components'
+import { rem, colors } from 'components/GlobalStyle'
 import type { Props } from './Footer'
 
 const StyledFooter = styled('footer')<Partial<Props>>`
-  height: 4rem;
+  height: ${rem(80)};
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #686868;
+  color: ${colors.lightBlack};
 `
 
 export default StyledFooter
