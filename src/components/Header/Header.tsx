@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import { useSiteMetadata } from 'hooks/useSiteMetadata'
 import Nav from 'components/Nav'
 import Logo from 'components/Logo'
+import VisuallyHidden from 'components/VisuallyHidden'
 
 export interface Props {
   className?: string
@@ -19,7 +20,7 @@ const Header = ({ className = '' }: Props) => {
       <div className="branding">
         <Link to="/" className="branding-link">
           <Logo size="300" />
-          <p className="visually-hidden">{title}</p>
+          <VisuallyHidden>{title}</VisuallyHidden>
         </Link>
       </div>
       <Nav />
