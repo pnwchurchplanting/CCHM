@@ -1,13 +1,14 @@
 import React from 'react'
 import GlobalStyle from 'components/GlobalStyle'
 import Header from 'components/Header'
+import Main from 'components/Main'
 import Footer from 'components/Footer'
 
 const Layout = ({ children }) => (
   <>
     <GlobalStyle />
     <Header />
-    <main className="content">{children}</main>
+    <Main>{children}</Main>
     <Footer />
   </>
 )

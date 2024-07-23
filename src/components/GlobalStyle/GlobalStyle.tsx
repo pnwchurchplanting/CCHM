@@ -26,43 +26,6 @@ const GlobalStyle = createGlobalStyle`
   svg { 
     display: block;
   }
-
-  .header {
-    height: 6rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between
-  }
-
-  .footer {
-    height: 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #686868;
-  }
-
-  .branding {
-    .branding-link {
-      display: block;
-      border: none;
-      transition: none;
-    }
-  }
-
-  .nav {
-    ul {
-      display: flex;
-
-      li {
-        margin-left: 1.5rem;
-      }
-    }
-  }
-
-  .content {
-    min-height: 75vh;
-  }
   
   .section {
     min-height: 80vh;
@@ -70,16 +33,6 @@ const GlobalStyle = createGlobalStyle`
 
   .church-plant-heading {
     margin: 2rem 0;
-  }
-
-  .church-plant {
-    display: flex;
-    grid-gap: 2rem;
-    margin: 4rem 0;
-
-    > div {
-      flex: 1
-    }
   }
 
   /* a11y */

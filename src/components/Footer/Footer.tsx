@@ -1,12 +1,17 @@
 import React from 'react'
+import StyledFooter from './Footer.style'
 
-const Footer = () => {
+export interface Props {
+  className?: string
+}
+
+const Footer = ({ className = '' }: Props) => {
   return (
-    <footer className="footer">
+    <StyledFooter className={className}>
       <p>
         <small>&copy; 2024 | The Classical Committee on Home Missions</small>
       </p>
-    </footer>
+    </StyledFooter>
   )
 }
 

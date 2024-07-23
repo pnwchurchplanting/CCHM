@@ -1,9 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import StyledNav from './Nav.style'
 
-const Nav = () => {
+export interface Props {
+  className?: string
+}
+
+const Nav = ({ className = '' }: Props) => {
   return (
-    <nav className="nav">
+    <StyledNav className={className}>
       <ul>
         <li>
           <Link to="/church-plants">Church Plants</Link>
@@ -18,7 +23,7 @@ const Nav = () => {
           <Link to="/giving">Giving</Link>
         </li>
       </ul>
-    </nav>
+    </StyledNav>
   )
 }
 
