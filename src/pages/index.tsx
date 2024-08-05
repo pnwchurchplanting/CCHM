@@ -1,21 +1,43 @@
 import * as React from 'react'
 import type { PageProps } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import Layout from 'components/Layout'
 import SEO from 'components/SEO'
+import Section from 'components/Section'
 
 const IndexPage: React.FC<PageProps> = () => {
+  const data = useStaticQuery(graphql`
+    query PageQuery {
+      allContentfulTest {
+        edges {
+          node {
+            title
+            splashImage {
+              url
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  const { title, splashImage } = data.allContentfulTest.edges[0].node
+
   return (
     <Layout>
-      <section className="section">
-        <h1>
-          Reformed Church Planting PNW is the home for planting a new URCNA
-          church in the Pacific Northwest region. This site is maintained by the
-          Classical Committee on Home Missions, PNW.
-        </h1>
-      </section>
-      <section className="section">
+      <div
+        className="splash"
+        style={{
+          backgroundImage: `url(${splashImage.gatsbyImageData.images.fallback.src})`,
+        }}
+      >
+        <Section>
+          <h1>{title}</h1>
+        </Section>
+      </div>
+      <Section>
         <h1>About Us</h1>
-      </section>
+      </Section>
     </Layout>
   )
 }

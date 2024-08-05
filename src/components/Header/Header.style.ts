@@ -4,13 +4,25 @@ import type { Props } from './Header'
 
 const StyledHeader = styled('header')<Partial<Props>>`
   .container {
-    height: ${rem(120)};
+    height: ${({ $isDesktop }) => ($isDesktop ? rem(120) : rem(80))};
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: ${({ $isDesktop }) =>
+      $isDesktop ? 'space-between' : 'center'};
   }
 
   .branding {
+    ${({ $isDesktop }) =>
+      $isDesktop
+        ? ''
+        : `
+      position: relative;
+      top: ${rem(5)};
+      background: #fff;
+      border-radius: 100%;
+      z-index: 999;
+    `};
+
     .branding-link {
       display: block;
       border: none;

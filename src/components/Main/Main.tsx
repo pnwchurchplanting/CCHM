@@ -8,11 +8,7 @@ export interface Props {
 }
 
 const Main = ({ className = '', children }: Props) => {
-  return (
-    <StyledMain className={className}>
-      <Container>{children}</Container>
-    </StyledMain>
-  )
+  return <StyledMain className={className}>{children}</StyledMain>
 }
 
 export default Main

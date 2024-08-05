@@ -1,6 +1,7 @@
 import * as React from 'react'
 import type { PageProps } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from 'components/Layout'
 import SEO from 'components/SEO'
 
@@ -11,15 +12,27 @@ const HealthcheckPage: React.FC<PageProps> = () => {
         edges {
           node {
             title
+            splashImage {
+              gatsbyImageData
+            }
           }
         }
       }
     }
   `)
 
-  const { title } = data.allContentfulTest.edges[0].node
+  const {
+    title,
+    splashImage: { gatsbyImageData },
+  } = data.allContentfulTest.edges[0].node
+  console.log(gatsbyImageData)
 
-  return <Layout>{title && <p>✅ {title}</p>}</Layout>
+  return (
+    <Layout>
+      {title && <p>✅ {title}</p>}{' '}
+      <GatsbyImage image={gatsbyImageData} alt="img" />
+    </Layout>
+  )
 }
 
 export default HealthcheckPage

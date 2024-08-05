@@ -5,7 +5,8 @@ import { rem } from 'components/GlobalStyle'
 const StyledContainer = styled('div')<Partial<Props>>`
   flex: 1;
   margin: 0 auto;
-  max-width: ${rem(1440)};
+  /* max-width: ${rem(1440)}; */
+  max-width: 90vw;
   padding: 0 ${rem(24)};
 `
 

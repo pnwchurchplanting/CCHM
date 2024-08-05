@@ -1,3 +1,5 @@
 export { default } from './GlobalStyle'
 export { default as rem } from './pxToRem'
 export { default as colors } from './colors'
+export * as mixins from './mixins'
+export { mq } from './mediaQueries'

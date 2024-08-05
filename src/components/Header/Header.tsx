@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { useMediaQuery } from 'react-responsive'
+import { mq } from 'components/GlobalStyle'
 import { useSiteMetadata } from 'hooks/useSiteMetadata'
 import Nav from 'components/Nav'
 import Logo, { LogoSmall } from 'components/Logo'
@@ -10,6 +11,7 @@ import StyledHeader from './Header.style'
 
 export interface Props {
   className?: string
+  $isDesktop?: boolean
 }
 
 const Header = ({ className = '' }: Props) => {
@@ -18,15 +20,15 @@ const Header = ({ className = '' }: Props) => {
   console.log('siteMetaData: ', siteMetaData)
 
   const isDesktop = useMediaQuery({
-    query: '(min-width: 1023px)',
+    query: mq.isDesktop,
   })
 
   return (
-    <StyledHeader className={className}>
+    <StyledHeader className={className} $isDesktop={isDesktop}>
       <Container>
         <div className="branding">
           <Link to="/" className="branding-link">
-            {isDesktop ? <Logo size="260" /> : <LogoSmall size="120" />}
+            {isDesktop ? <Logo size="260" /> : <LogoSmall size="90" />}
             <VisuallyHidden>{title}</VisuallyHidden>
           </Link>
         </div>
