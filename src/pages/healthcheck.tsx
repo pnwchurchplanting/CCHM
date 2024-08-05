@@ -1,36 +1,37 @@
 import * as React from 'react'
 import type { PageProps } from 'gatsby'
 import { useStaticQuery, graphql } from 'gatsby'
-import { GatsbyImage } from 'gatsby-plugin-image'
+// import { GatsbyImage } from 'gatsby-plugin-image'
 import Layout from 'components/Layout'
 import SEO from 'components/SEO'
 
 const HealthcheckPage: React.FC<PageProps> = () => {
-  const data = useStaticQuery(graphql`
-    query PageQuery {
-      allContentfulTest {
-        edges {
-          node {
-            title
-            splashImage {
-              gatsbyImageData
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query PageQuery {
+  //     allContentfulTest {
+  //       edges {
+  //         node {
+  //           title
+  //           splashImage {
+  //             gatsbyImageData
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
-  const {
-    title,
-    splashImage: { gatsbyImageData },
-  } = data.allContentfulTest.edges[0].node
-  console.log(gatsbyImageData)
+  // const {
+  //   title,
+  //   splashImage: { gatsbyImageData },
+  // } = data.allContentfulTest.edges[0].node
+  // console.log(gatsbyImageData)
 
   return (
     <Layout>
-      {title && <p>✅ {title}</p>}{' '}
-      <GatsbyImage image={gatsbyImageData} alt="img" />
+      HealthcheckPage
+      {/* {title && <p>✅ {title}</p>}{' '}
+      <GatsbyImage image={gatsbyImageData} alt="img" /> */}
     </Layout>
   )
 }
