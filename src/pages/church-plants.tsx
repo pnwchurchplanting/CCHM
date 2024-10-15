@@ -1,15 +1,41 @@
 import * as React from 'react'
 import type { PageProps } from 'gatsby'
+// import { useStaticQuery, graphql } from 'gatsby'
 import Layout from 'components/Layout'
 import SEO from 'components/SEO'
 import ChurchPlant from 'components/ChurchPlant'
 import Section from 'components/Section'
+import Container from 'components/Container'
 
 const ChurchPlantsPage: React.FC<PageProps> = () => {
+  // const data = useStaticQuery(graphql`
+  //   query PageQuery {
+  //     allContentfulTest {
+  //       edges {
+  //         node {
+  //           title
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+
+  // const { title } = data.allContentfulTest.edges[0].node
+
   return (
     <Layout>
+      <div
+        className="splash"
+        style={{
+          backgroundImage: `url(https://images.ctfassets.net/thw99qcq417p/4w5blxepB6UIEVbWzrqAaC/e6647b4b38a980e80be5fe1ea75d05e5/pnw-bg.jpeg?w=3000&h=2000&fl=progressive&q=50&fm=jpg)`,
+        }}
+      >
+        <Section>
+          <h1>Current Church Plants</h1>
+        </Section>
+      </div>
       <Section>
-        <h1>Church Plants</h1>
+        {/* <h1 className="section-title">Current Church Plants</h1> */}
         <ChurchPlant
           name="Peace United Reformed Church"
           location="Vancouver, WA"
@@ -37,6 +63,14 @@ const ChurchPlantsPage: React.FC<PageProps> = () => {
           link="https://www.bigspringsurc.com"
           linkText="bigspringsurc.com"
         />
+      </Section>
+
+      <Container>
+        <hr />
+      </Container>
+
+      <Section>
+        <h2 className="section-title">Former Church Plants</h2>
         <ChurchPlant
           name="Ripon Reformed Fellowship"
           location="Ripon, CA"

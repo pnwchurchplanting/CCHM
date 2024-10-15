@@ -25,7 +25,7 @@ const Header = ({ className = '' }: Props) => {
 
   return (
     <StyledHeader className={className} $isDesktop={isDesktop}>
-      <Container>
+      <Container $fullWidth>
         <div className="branding">
           <Link to="/" className="branding-link">
             {isDesktop ? <Logo size="260" /> : <LogoSmall size="90" />}

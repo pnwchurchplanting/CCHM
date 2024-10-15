@@ -2,6 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 import colors from './colors'
 import { baseFontSize } from './constants'
 import { vhc } from './mixins'
+import { mq } from './mediaQueries'
 
 import 'normalize.css' // https://github.com/necolas/normalize.css
 
@@ -38,6 +39,10 @@ const GlobalStyle = createGlobalStyle`
 
   /* TEMP */
 
+  .section-title {
+    margin-bottom: 4rem;
+  }
+
   .splash {
     position: relative;
     background-size: cover;
@@ -61,9 +66,13 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
-      font-size: calc(2rem + 1vw);
+      font-size: calc(1.5rem + 1vw);
       max-width: 30ch;
       z-index: 1;
+
+      @media ${mq.isDesktop} {
+        font-size: calc(1.5rem + 1.5vw);
+      }
     }
   }
 `
