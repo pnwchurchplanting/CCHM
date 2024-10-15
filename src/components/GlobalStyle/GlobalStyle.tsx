@@ -43,7 +43,8 @@ const GlobalStyle = createGlobalStyle`
     background-size: cover;
     text-align: center;
     color: ${colors.white};
-
+    background-position: center;
+        
     &:after {
       content: '';
       position: absolute;
@@ -52,7 +53,6 @@ const GlobalStyle = createGlobalStyle`
       left: 0;
       right: 0;
       background-color:rgba(0, 0, 0, 0.75);
-      background-color: rgba(39, 70, 83, 0.85);
       pointer-events: none;
     }
 
@@ -61,7 +61,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
-      font-size: calc(1.25rem + 1vw);
+      font-size: calc(2rem + 1vw);
+      max-width: 30ch;
       z-index: 1;
     }
   }

@@ -46,11 +46,11 @@ const Nav = ({ className = '' }: Props) => {
               Contact Us
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/giving" activeClassName={ACTIVE_CLASS_NAME}>
               Giving
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </StyledNav>
