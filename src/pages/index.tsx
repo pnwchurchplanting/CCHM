@@ -18,7 +18,7 @@ const IndexPage: React.FC<PageProps> = () => {
     }
   `)
 
-  const { title } = data.allContentfulTest.edges[0].node
+  const { title } = data.allContentfulSplash.edges[0].node
 
   return (
     <Layout>
