@@ -8,7 +8,7 @@ import Section from 'components/Section'
 const IndexPage: React.FC<PageProps> = () => {
   const data = useStaticQuery(graphql`
     query PageQuery {
-      allContentfulTest {
+      allContentfulSplash {
         edges {
           node {
             title
