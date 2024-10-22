@@ -30,6 +30,14 @@ const IndexPage: React.FC<PageProps> = () => {
       >
         <Section>
           <h1>{title}</h1>
+          <div className="section--inner section--inner--short button-group">
+            <a href="/desire-to-plant" className="button">
+              Desire to Plant?
+            </a>
+            <a href="/contact-us" className="button button-outline">
+              Get in Touch
+            </a>
+          </div>
         </Section>
       </div>
       <Section $isNarrow>
@@ -59,6 +67,12 @@ const IndexPage: React.FC<PageProps> = () => {
           congregation in your area, please{' '}
           <a href="/contact-us">contact the Committee</a>.
         </p>
+
+        <div className="section--inner section--inner--short">
+          <a href="/contact-us" className="button">
+            Contact Us
+          </a>
+        </div>
       </Section>
     </Layout>
   )

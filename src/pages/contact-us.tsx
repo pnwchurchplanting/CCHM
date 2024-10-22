@@ -23,7 +23,7 @@ const ContactUsPage: React.FC<PageProps> = () => {
           <h1>Contact Us</h1>
         </Section>
       </div>
-      <Section $isNarrow>
+      <Section $isNarrow $isShort>
         <div className="media">
           <img
             src="https://images.ctfassets.net/thw99qcq417p/7IBqH4as4LwacHMDChB2Fw/8499c10ea0a5c0077f9e1e6bdd58c654/vanderpol.jpeg"
@@ -43,7 +43,7 @@ const ContactUsPage: React.FC<PageProps> = () => {
           </p>
         </div>
 
-        <div style={{ marginTop: '4rem' }}>
+        <div className="section--inner">
           <p>
             <span className="label">Contact us at</span>
             <br />

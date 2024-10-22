@@ -108,6 +108,50 @@ const GlobalStyle = createGlobalStyle`
   .email {
     font-size: 1.5rem;
   }
+
+  .section--inner {
+    ${mod}
+    padding: 4rem 0;
+    
+    &.section--inner--short {
+      padding: 2rem 0;
+    }
+  }
+
+  .button {
+    display: inline-block;
+    text-decoration: none;
+    color: ${colors.white};
+    padding: ${rem(12)} ${rem(16)};
+    border: none;
+    background-color: ${colors.green};
+    border-radius: ${rem(8)};
+    
+    &:focus-visible,
+    &:hover {
+      background-color: ${colors.darkGreen};
+      text-decoration: none;
+    }
+
+    &.button-outline {
+      background-color: transparent;
+      border: 2px solid ${colors.green};
+      color: ${colors.green};
+      
+      &:focus-visible,
+      &:hover {
+        color: ${colors.white};
+        border: 2px solid ${colors.green};
+        background-color: ${colors.green};
+        text-decoration: none;
+      }
+    }
+  }
+
+  .button-group {
+    display: flex;
+    grid-gap: 1.5rem;
+  }
 `
 
 export default GlobalStyle

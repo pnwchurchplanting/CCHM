@@ -18,8 +18,13 @@ const StyledSection = styled('section')<Partial<Props>>`
 
   .container {
     ${mixins.mod}
+    flex-direction: column;
     padding-top: 4rem;
     padding-bottom: 4rem;
+
+    > * {
+      z-index: 1;
+    }
   }
 `
 
