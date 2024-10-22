@@ -1,8 +1,9 @@
 import { createGlobalStyle } from 'styled-components'
 import colors from './colors'
 import { baseFontSize } from './constants'
-import { vhc } from './mixins'
+import { vhc, mod } from './mixins'
 import { mq } from './mediaQueries'
+import rem from './pxToRem'
 
 import 'normalize.css' // https://github.com/necolas/normalize.css
 
@@ -14,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: sans-serif;
     font-size: 1rem;
-    line-height: 1.3;
+    line-height: 1.5;
     background-color: #fff;
   }
 
@@ -26,15 +27,24 @@ const GlobalStyle = createGlobalStyle`
 
   a {
     color: blue;
-    text-decoration: none;
+    /* text-decoration: none; */
 
     &:hover {
       text-decoration: underline;
     }
   }
 
+  a[target="_blank"]:after {
+  content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==");
+    margin: 0 3px 0 5px;
+  }
+
   button {
     cursor: pointer;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
   }
 
   /* TEMP */
@@ -74,6 +84,29 @@ const GlobalStyle = createGlobalStyle`
         font-size: calc(1.5rem + 1.5vw);
       }
     }
+  }
+
+  .media {
+    ${mod}
+    display: flex;
+    align-items: center;
+    grid-gap: 1.5rem;
+    padding: 1rem;
+    border-radius: ${rem(4)};
+    background-color: ${colors.green}25;
+
+    img {
+      border-radius: ${rem(3)};
+    }
+  }
+
+  .label {
+    color: ${colors.darkGreen};
+    font-size: 16px;
+  }
+
+  .email {
+    font-size: 1.5rem;
   }
 `
 

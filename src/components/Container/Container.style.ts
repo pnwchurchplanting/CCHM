@@ -8,8 +8,9 @@ const StyledContainer = styled('div')<Partial<Props>>`
   max-width: ${rem(1200)};
   padding: 0 ${rem(24)};
 
-  // props function
+  // style props
   ${({ $fullWidth }) => $fullWidth && `max-width: 90vw;`}
+  ${({ $isNarrow }) => $isNarrow && `max-width: ${rem(768)};`}
 `
 
 export default StyledContainer

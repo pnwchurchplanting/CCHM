@@ -32,8 +32,33 @@ const IndexPage: React.FC<PageProps> = () => {
           <h1>{title}</h1>
         </Section>
       </div>
-      <Section>
-        <h1>About Us</h1>
+      <Section $isNarrow>
+        <h1>About PNW Church Planting</h1>
+        <p>
+          Until Christ returns, His church must continue planting new
+          congregations where few or none exist. PNW Church Planting, out of
+          obedience to Christ, promotes the establishment of new congregations
+          in the Pacific Northwest.
+        </p>
+
+        <p>
+          We specifically assist churches and interested groups in planting
+          congregations committed to{' '}
+          <a href="https://threeforms.org" target="_blank">
+            the Reformed Confessions
+          </a>
+          .
+        </p>
+
+        <p>
+          The Classical Committee on Home Missions (PNW) of the{' '}
+          <a href="https://www.urcna.org/pacificnorthwest" target="_blank">
+            United Reformed Churches in North America
+          </a>
+          , maintains this site. If you're interested in planting a Reformed
+          congregation in your area, please{' '}
+          <a href="/contact-us">contact the Committee</a>.
+        </p>
       </Section>
     </Layout>
   )

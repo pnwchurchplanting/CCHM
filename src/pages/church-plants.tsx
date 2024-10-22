@@ -30,7 +30,7 @@ const ChurchPlantsPage: React.FC<PageProps> = () => {
           backgroundImage: `url(https://images.ctfassets.net/thw99qcq417p/4w5blxepB6UIEVbWzrqAaC/e6647b4b38a980e80be5fe1ea75d05e5/pnw-bg.jpeg?w=3000&h=2000&fl=progressive&q=50&fm=jpg)`,
         }}
       >
-        <Section>
+        <Section $isShort>
           <h1>Current Church Plants</h1>
         </Section>
       </div>
