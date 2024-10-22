@@ -49,7 +49,7 @@ const ChurchPlantsPage: React.FC<PageProps> = () => {
           name="Providence Reformed Church"
           location="Meridian, Idaho"
           description="Providence Reformed Church is a church plant of Christ Reformed Church in Nampa, Idaho. We are happy to provide a new home for Christian worship in the heart of Meridian, Idaho, just outside of Boise."
-          image="https://www.providenceurc.org/wp-content/uploads/2023/03/providence-urc_meridian-idaho-1024x768.jpg"
+          image="https://images.ctfassets.net/thw99qcq417p/2hP2bznIPhpdGmj7uwjwxp/9474ce52e845afffcac72dd3395138c0/Providence.jpeg"
           logo="https://www.providenceurc.org/wp-content/uploads/2023/03/providence-URC-meridian_logo.png"
           link="https://www.providenceurc.org"
           linkText="providenceurc.org"
@@ -69,14 +69,17 @@ const ChurchPlantsPage: React.FC<PageProps> = () => {
         <hr />
       </Container>
 
-      <Section>
-        <h2 className="section-title">Former Church Plants</h2>
+      {/* <Section>
+        <h2>Recent Church Plants</h2>
+        <p>
+          Blurb about the success that God has worked through our organization
+        </p>
         <ChurchPlant
           name="Ripon Reformed Fellowship"
           location="Ripon, CA"
           description="A newly planted reformed church plant in Ripon, California. This work is overseen by Trinity URC in Walnut Creek."
         />
-      </Section>
+      </Section> */}
     </Layout>
   )
 }
