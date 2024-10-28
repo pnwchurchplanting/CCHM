@@ -25,9 +25,9 @@ const ChurchPlantsPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <div
-        className="splash"
+        className="splash splash--light"
         style={{
-          backgroundImage: `url(https://images.ctfassets.net/thw99qcq417p/4w5blxepB6UIEVbWzrqAaC/e6647b4b38a980e80be5fe1ea75d05e5/pnw-bg.jpeg?w=3000&h=2000&fl=progressive&q=50&fm=jpg)`,
+          backgroundImage: `url(https://images.ctfassets.net/thw99qcq417p/1NR0vddLLlJ4Kim3m0mTKC/f7df93eae9f7b3e0def1225c753ecf8b/Map2.jpg)`,
         }}
       >
         <Section $isShort>
@@ -35,7 +35,6 @@ const ChurchPlantsPage: React.FC<PageProps> = () => {
         </Section>
       </div>
       <Section>
-        {/* <h1 className="section-title">Current Church Plants</h1> */}
         <ChurchPlant
           name="Peace United Reformed Church"
           location="Vancouver, WA"
@@ -69,17 +68,31 @@ const ChurchPlantsPage: React.FC<PageProps> = () => {
         <hr />
       </Container>
 
-      {/* <Section>
+      <Section>
         <h2>Recent Church Plants</h2>
         <p>
-          Blurb about the success that God has worked through our organization
+          Church plants fulfill Jesus&rsquo; commission to &ldquo;make disciples
+          of all nations&rdquo; (Matt 28:19) under the authority of elders from
+          an established URCNA congregation. As God provides growth (1 Cor
+          3:6-7), a church plant should transition into an organized church.
+          This means the church plant can function independently, with its own
+          elders overseeing the congregation and also achieving financial
+          self-sufficiency. Several former church plants in the Pacific
+          Northwest have organized as official URCNA congregations.
         </p>
-        <ChurchPlant
-          name="Ripon Reformed Fellowship"
-          location="Ripon, CA"
-          description="A newly planted reformed church plant in Ripon, California. This work is overseen by Trinity URC in Walnut Creek."
-        />
-      </Section> */}
+
+        <div className="section--inner">
+          <ChurchPlant
+            name="Gig Harbor URC"
+            location="Gig Harbor, WA"
+            description={`We are a warm, confessional, and Reformed church located in Gig Harbor.`}
+            image="https://images.ctfassets.net/thw99qcq417p/5fffNHlmGrBo2y5wrGCF0M/b1433404f7ac0e2720d6a3e9cc4d3547/gig-harbor.webp"
+            logo="https://images.ctfassets.net/thw99qcq417p/2Gg6oUiQrSKQJTLk6CPubO/ae6a7496ffdf61f47f00f8cf27ddbeef/gig-harbor-logo.png"
+            link="https://www.gigharborurc.org"
+            linkText="gigharborurc.org"
+          />
+        </div>
+      </Section>
     </Layout>
   )
 }

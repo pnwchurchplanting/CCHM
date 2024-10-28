@@ -55,6 +55,18 @@ const DesireToPlantPage: React.FC<PageProps> = () => {
           establishing new churches, from the beginning of the process to the
           end.
         </p>
+
+        <div className="section--inner">
+          <blockquote>
+            <p>
+              “Go therefore and make disciples of all nations, baptizing them in
+              the name of the Father and of the Son and of the Holy Spirit,
+              teaching them to observe all that I have commanded you. And
+              behold, I am with you always, to the end of the age.”
+            </p>
+          </blockquote>
+          <cite>Matthew 28:19-20, ESV</cite>
+        </div>
       </Section>
     </Layout>
   )

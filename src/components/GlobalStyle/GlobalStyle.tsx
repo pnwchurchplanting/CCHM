@@ -70,6 +70,12 @@ const GlobalStyle = createGlobalStyle`
       background-color:rgba(0, 0, 0, 0.75);
       pointer-events: none;
     }
+    
+    &.splash--light {
+      &:after {
+        background-color:rgba(0, 0, 0, 0.5);
+      }
+    }
 
     .container {
       ${vhc}
@@ -88,12 +94,21 @@ const GlobalStyle = createGlobalStyle`
 
   .media {
     ${mod}
-    display: flex;
-    align-items: center;
-    grid-gap: 1.5rem;
     padding: 1rem;
     border-radius: ${rem(4)};
     background-color: ${colors.green}25;
+    
+    @media ${mq.isBeforeDesktop} {
+      img {
+        margin: 1rem auto;
+      }
+    }
+    
+    @media ${mq.isDesktop} {
+      display: flex;
+      align-items: center;
+      grid-gap: 1.5rem;
+    }
 
     img {
       border-radius: ${rem(3)};
@@ -106,7 +121,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .email {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .section--inner {
@@ -151,6 +166,20 @@ const GlobalStyle = createGlobalStyle`
   .button-group {
     display: flex;
     grid-gap: 1.5rem;
+  }
+
+  blockquote, cite {
+  }
+  blockquote {
+    color: #999;
+    font-style: italic;
+    font-weight: 100;
+    font-size: ${rem(28)};
+  }
+  cite {
+    /* font-style: normal; */
+    font-size: ${rem(16)};
+    
   }
 `
 

@@ -73,6 +73,16 @@ const IndexPage: React.FC<PageProps> = () => {
             Contact Us
           </a>
         </div>
+
+        <div className="section--inner">
+          <blockquote>
+            <p>
+              “So neither he who plants nor he who waters is anything, but only
+              God who gives the growth.”
+            </p>
+          </blockquote>
+          <cite>1 Corinthians 3:7, ESV</cite>
+        </div>
       </Section>
     </Layout>
   )

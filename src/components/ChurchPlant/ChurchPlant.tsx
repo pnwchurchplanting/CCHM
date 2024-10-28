@@ -1,4 +1,6 @@
 import React from 'react'
+import { useMediaQuery } from 'react-responsive'
+import { mq } from 'components/GlobalStyle'
 import StyledChurchPlant from './ChurchPlant.style'
 
 export interface Props {
@@ -22,6 +24,10 @@ const ChurchPlant = ({
   link,
   linkText,
 }: Props) => {
+  const isDesktop = useMediaQuery({
+    query: mq.isDesktop,
+  })
+
   return (
     <StyledChurchPlant className={className}>
       <div>
@@ -31,13 +37,17 @@ const ChurchPlant = ({
         />
       </div>
       <div>
-        {logo && <img src={logo} alt={`${name} logo`} height={80} />}
-        <h2>{name}</h2>
-        <p>{location}</p>
-        <p>{description}</p>
-        <p>
-          <a href={link}>{linkText || link}</a>
-        </p>
+        {isDesktop && logo && (
+          <img src={logo} alt={`${name} logo`} height={80} />
+        )}
+        <h2 className="title">{name}</h2>
+        <div className="content">
+          <p className="location">{location}</p>
+          <p className="description">{description}</p>
+          <p>
+            <a href={link}>{linkText || link}</a>
+          </p>
+        </div>
       </div>
     </StyledChurchPlant>
   )

@@ -1,5 +1,5 @@
 import { styled } from 'styled-components'
-import { rem, colors, mixins } from 'components/GlobalStyle'
+import { rem, colors, mixins, mq } from 'components/GlobalStyle'
 import type { Props } from './Nav'
 
 const StyledNav = styled('nav')<Partial<Props>>`
@@ -12,7 +12,10 @@ const StyledNav = styled('nav')<Partial<Props>>`
     ${mixins.vhc}
     background: none;
     border: none;
-    ${({ $isDesktop }) => ($isDesktop ? 'display: none' : '')};
+
+    @media ${mq.isDesktop} {
+      display: none;
+    }
 
     svg {
       font-size: ${rem(32)};
