@@ -67,6 +67,12 @@ const DesireToPlantPage: React.FC<PageProps> = () => {
           </blockquote>
           <cite>Matthew 28:19-20, ESV</cite>
         </div>
+
+        <p style={{ opacity: 0, position: 'absolute', width: 0, height: 0 }}>
+          The Classical Committee on Home Missions (PNW) plants churches in
+          Northern California, Central Valley California, The Bay Area and
+          Walnut Creek in California, Oregon, Washington, Idaho and Montana.
+        </p>
       </Section>
     </Layout>
   )

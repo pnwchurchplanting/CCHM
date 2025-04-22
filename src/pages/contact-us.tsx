@@ -8,7 +8,15 @@ const ContactUsPage: React.FC<PageProps> = () => {
   useEffect(() => {
     const email = 'aGVsbG9AcG53Y2h1cmNocGxhbnRpbmcub3Jn'
     const $el = document.getElementById('email')
-    if ($el) $el.innerHTML = atob(email)
+    if ($el) {
+      $el.innerHTML = atob(email)
+      $el.setAttribute(
+        'href',
+        `mailto:${atob(
+          email,
+        )}?subject=I'm interested in planting a Reformed church in the Pacific Northwest`,
+      )
+    }
   })
 
   return (
@@ -47,7 +55,7 @@ const ContactUsPage: React.FC<PageProps> = () => {
           <p>
             <span className="label">Contact us at</span>
             <br />
-            <span id="email" className="email" />
+            <a href="" id="email" className="email" />
           </p>
         </div>
       </Section>
