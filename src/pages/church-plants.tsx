@@ -36,22 +36,10 @@ const ChurchPlantsPage: React.FC<PageProps> = () => {
       </div>
       <Section>
         <ChurchPlant
-          name="Peace United Reformed Church"
-          location="Vancouver, WA"
-          description="Peace United Reformed Church is a Church Plant of Grace United Reformed Church in Portland, OR and members of the United Reformed Churches in North America. Learn more about the Mission and Vision of Peace URC below."
-          image="https://peaceurc.com/wp-content/uploads/2023/07/peace7-23-1.jpg"
-          logo="https://peaceurc.com/wp-content/uploads/2019/10/Horizontal-1-1.png"
-          link="https://peaceurc.com"
-          linkText="peaceurc.com"
-        />
-        <ChurchPlant
-          name="Providence Reformed Church"
-          location="Meridian, Idaho"
-          description="Providence Reformed Church is a church plant of Christ Reformed Church in Nampa, Idaho. We are happy to provide a new home for Christian worship in the heart of Meridian, Idaho, just outside of Boise."
-          image="https://images.ctfassets.net/thw99qcq417p/2hP2bznIPhpdGmj7uwjwxp/9474ce52e845afffcac72dd3395138c0/Providence.jpeg"
-          logo="https://www.providenceurc.org/wp-content/uploads/2023/03/providence-URC-meridian_logo.png"
-          link="https://www.providenceurc.org"
-          linkText="providenceurc.org"
+          name="Central Oregon Joint Venture"
+          location="Redmond, OR"
+          description="The PNW Committee on Home Missions was approached by several families living in Central Oregon about the possibility of beginning a new URC congregation in their community. In the summer of 2025 the Consistory of Grace URC (Portland, OR) formally agreed to oversee these families and take the next steps in planting a church in Central Oregon. This new work is supported by the wisdom of a Joint Venture Committee which is made up of several congregations within Classis PNW."
+          image="https://placehold.co/580x387?text=Coming+Soon"
         />
         <ChurchPlant
           name="Big Springs Community Church"
@@ -82,6 +70,24 @@ const ChurchPlantsPage: React.FC<PageProps> = () => {
         </p>
 
         <div className="section--inner">
+          <ChurchPlant
+            name="Peace United Reformed Church"
+            location="Vancouver, WA"
+            description="Peace United Reformed Church is a Church Plant of Grace United Reformed Church in Portland, OR and members of the United Reformed Churches in North America. Learn more about the Mission and Vision of Peace URC below."
+            image="https://peaceurc.com/wp-content/uploads/2023/07/peace7-23-1.jpg"
+            logo="https://peaceurc.com/wp-content/uploads/2019/10/Horizontal-1-1.png"
+            link="https://peaceurc.com"
+            linkText="peaceurc.com"
+          />
+          <ChurchPlant
+            name="Providence Reformed Church"
+            location="Meridian, Idaho"
+            description="Providence Reformed Church is a church plant of Christ Reformed Church in Nampa, Idaho. We are happy to provide a new home for Christian worship in the heart of Meridian, Idaho, just outside of Boise."
+            image="https://images.ctfassets.net/thw99qcq417p/2hP2bznIPhpdGmj7uwjwxp/9474ce52e845afffcac72dd3395138c0/Providence.jpeg"
+            logo="https://www.providenceurc.org/wp-content/uploads/2023/03/providence-URC-meridian_logo.png"
+            link="https://www.providenceurc.org"
+            linkText="providenceurc.org"
+          />
           <ChurchPlant
             name="Gig Harbor URC"
             location="Gig Harbor, WA"
