@@ -42,6 +42,11 @@ const Nav = ({ className = '' }: Props) => {
             </Link>
           </li>
           <li>
+            <Link to="/guidelines" activeClassName={ACTIVE_CLASS_NAME}>
+              Guidelines
+            </Link>
+          </li>
+          <li>
             <Link to="/contact-us" activeClassName={ACTIVE_CLASS_NAME}>
               Contact Us
             </Link>
