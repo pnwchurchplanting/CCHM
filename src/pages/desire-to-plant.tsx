@@ -57,7 +57,7 @@ const DesireToPlantPage: React.FC<PageProps> = () => {
         </p>
 
         <p>
-          <a href="/guidelines">Church Planting Fund Grant Guidelines</a>
+          <a href="/cpf">Church Planting Fund Grant Guidelines</a>
         </p>
 
         <div className="section--inner">

@@ -42,7 +42,7 @@ const Nav = ({ className = '' }: Props) => {
             </Link>
           </li>
           <li>
-            <Link to="/guidelines" activeClassName={ACTIVE_CLASS_NAME}>
+            <Link to="/cpf" activeClassName={ACTIVE_CLASS_NAME}>
               Guidelines
             </Link>
           </li>
